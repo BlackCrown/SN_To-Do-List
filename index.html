@@ -15,20 +15,17 @@
         <p>Projeto de cotrole de taferas, estilo To-Do List!</p>
 
         <section clasName="addTask-container">
-            <label for="addTask">
+            <label for="taskInput">
                 <h3>Adcionar Tarefa</h3>
             </label>
-            <input id="addTask" type="text">
-            <button>Adicionar</button>
+            <input id="taskInput" type="text">
+            <button onclick="addTask()">Adicionar</button>
         </section>
 
         <div className="tasks-container">
             <h3>Tarefas</h3>
-            <ul clasName="tasks-list">
-                    <button><li>Comprar ração para o gato!</li></button>
-                    <li>Tirar o lixo para fora</li>
-                    <li>Lavar o carro</li>
-                    <li>Marcar consulta médica</li>
+            <ul id="tasks-list">
+                    
             </ul>
         </div>
     </main>
