@@ -6,24 +6,31 @@
 let tasks = [];
 
 function addTask() {
-  let taskInput = document.getElementById("taskInput").value;
-  console.log("Tarefa adicionada:", taskInput);
-  if (taskInput == null || taskInput == "") {
-    alert("Por favor, insira uma tarefa válida.");
+  let taskInput = document.getElementById('taskInput').value;
+
+  if (taskInput == null || taskInput == '') {
+    alert('Por favor, insira uma tarefa válida.');
     return;
   }
   tasks.push(taskInput);
-  console.log("Tarefas atuais:", tasks);
 
   showTasks();
+  document.getElementById('taskInput').value = '';
 }
 
 function showTasks() {
-  let tasksList = document.getElementById("tasks-list");
+  let tasksList = document.getElementById('tasks-list');
 
   tasksList.innerHTML = tasks
     .map(
-      (task, index) => `<li onClick='checkTask()' id='${index}'>${task}</li>`,
+      (task, index) =>
+        `<li onClick='checkTask(${index})' id='task-${index}'>${task}</li>`,
     )
-    .join("");
+    .join('');
+}
+
+function checkTask(index) {
+  const task = document.getElementById(`task-${index}`);
+  console.log(task);
+  task.className = 'taskChecked';
 }
