@@ -17,3 +17,42 @@ ol {
   list-style: none;
 }
 /*#endregion*/
+h3 {
+  margin: 8px;
+}
+
+body {
+  justify-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+header {
+  width: 100%;
+  background: #9e9999;
+  border-bottom: 2px black solid;
+  border-radius: 0 0 20px 20px;
+  padding: 10px 0;
+}
+
+main {
+  margin-top: 20px;
+}
+
+#tasks-container {
+  margin: 20px;
+  min-width: 800px;
+  min-height: 200px;
+  border-radius: 20px;
+  border: 3px black solid;
+  background: #edeae6;
+  justify-content: center;
+}
+
+.taskChecked {
+  margin: 0 80px;
+  background: #bab6b6;
+  border-radius: 50px;
+  text-decoration: line-through;
+  color: #572a2a;
+}

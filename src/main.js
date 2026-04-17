@@ -31,6 +31,5 @@ function showTasks() {
 
 function checkTask(index) {
   const task = document.getElementById(`task-${index}`);
-  console.log(task);
-  task.className = 'taskChecked';
+  task.classList.toggle('taskChecked');
 }
